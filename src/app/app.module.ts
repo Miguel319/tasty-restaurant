@@ -9,6 +9,7 @@ import { RecetasArticulosComponent } from './recetas/recetas-lista/recetas-artic
 import { ComprasListComponent } from './compras-list/compras-list.component';
 import { ComprasEditarComponent } from './compras-list/compras-editar/compras-editar.component';
 import {RecetasListaComponent} from './recetas/recetas-lista/recetas-lista.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {RecetasListaComponent} from './recetas/recetas-lista/recetas-lista.compo
     ComprasEditarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
