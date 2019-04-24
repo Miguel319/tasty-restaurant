@@ -10,6 +10,11 @@ import { ComprasListComponent } from './compras-list/compras-list.component';
 import { ComprasEditarComponent } from './compras-list/compras-editar/compras-editar.component';
 import {RecetasListaComponent} from './recetas/recetas-lista/recetas-lista.component';
 import {FormsModule} from '@angular/forms';
+import { ComprasListaService } from './compras-list/compras-lista.service';
+import { DropdownDirective } from './compartido/dropdown.directive';
+import { AppRoutingModule } from './app-routing.module';
+import { RecetaInicioComponent } from './recetas/receta-inicio/receta-inicio.component';
+import { RecetaEditarComponent } from './recetas/receta-editar/receta-editar.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +25,18 @@ import {FormsModule} from '@angular/forms';
     RecetasDetallesComponent,
     RecetasArticulosComponent,
     ComprasListComponent,
-    ComprasEditarComponent
+    ComprasEditarComponent,
+    DropdownDirective,
+    RecetaInicioComponent,
+    RecetaEditarComponent
+    
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [ComprasListaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
